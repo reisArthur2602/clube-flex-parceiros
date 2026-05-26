@@ -1,11 +1,12 @@
+import { siteUrl } from '@/constants';
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://parceiros.flexclube.com.br';
+
 
     return [
         {
-            url: baseUrl,
+            url: siteUrl,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
