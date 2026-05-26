@@ -84,7 +84,7 @@ export function AdminShell({ user, children }: { user: User; children: React.Rea
             {/* Topbar mobile */}
             <header className="lg:hidden fixed top-0 left-0 right-0 z-10 bg-ink text-cream-50 px-6 py-4 flex items-center justify-between">
                 <Link href="/admin" className="flex items-baseline gap-1">
-                    <span className="display text-xl">Vantagem</span>
+                    <span className="display text-xl">Parceiros</span>
                     <span className="display-italic text-xl text-coral">+</span>
                 </Link>
                 <button onClick={logout} className="text-sm text-cream-50/70">
