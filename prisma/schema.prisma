@@ -1,0 +1,57 @@
+// Prisma schema — Clube Vantagem+
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         String   @default("supervisor")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("admin_users")
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  slug     String    @unique
+  icon     String?   // emoji ou nome de ícone
+  order    Int       @default(0)
+  partners Partner[]
+
+  @@map("categories")
+}
+
+model Partner {
+  id                     String   @id @default(cuid())
+  name                   String
+  slug                   String   @unique
+  description            String   @db.Text
+  shortDescription       String?
+  discount               String   // ex: "30% OFF" ou "Até 50% OFF"
+  logoUrl                String?
+  websiteUrl             String?
+  couponCode             String?
+  redemptionInstructions String?  @db.Text
+  isActive               Boolean  @default(true)
+  isFeatured             Boolean  @default(false)
+  categoryId             String
+  category               Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  @@index([categoryId])
+  @@index([isActive])
+  @@map("partners")
+}
