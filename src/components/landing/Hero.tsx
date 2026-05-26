@@ -15,7 +15,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="reveal reveal-delay-1 display text-[clamp(3rem,9vw,8.5rem)] text-ink">
+            <h1 className="reveal reveal-delay-1 display text-[clamp(3rem,8vw,7.5rem)] text-ink">
               Descontos
               <br />
               que <span className="display-italic text-coral">merecem</span>

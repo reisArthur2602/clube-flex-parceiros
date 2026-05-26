@@ -33,7 +33,7 @@ export function Benefits() {
             <h2 className="display text-5xl lg:text-7xl text-ink leading-[0.95]">
               Mais que descontos.
               <br />
-              <span className="display-italic text-forest">Uma rotina mais</span>
+              <span className="display-italic text-coral">Uma rotina mais</span>
               <br />
               generosa.
             </h2>

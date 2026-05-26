@@ -1,10 +1,10 @@
 export function StatsTicker() {
   const items = [
-    { value: '200+', label: 'parceiros' },
-    { value: 'Até 70%', label: 'de desconto' },
-    { value: '50 mil', label: 'membros ativos' },
+    { value: '100+', label: 'parceiros' },
+    { value: 'Até 40%', label: 'de desconto' },
+    { value: '5 mil', label: 'membros ativos' },
     { value: '8', label: 'categorias' },
-    { value: 'R$ 12M', label: 'economizados em 2024' },
+    { value: 'R$ 1M', label: 'economizados em 2024' },
     { value: '4.9★', label: 'avaliação média' },
   ];
   // Duplicado para loop infinito
